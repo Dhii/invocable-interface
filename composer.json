@@ -23,5 +23,9 @@
         "psr-4": {
             "Dhii\\Util\\Invocation\\": "src"
         }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "csfix": "php-cs-fixer fix -vvv"
     }
 }
