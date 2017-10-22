@@ -17,7 +17,7 @@ class InvocableInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Invocation\\InvocableInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Invocation\InvocableInterface';
 
     /**
      * The invocation return value.
