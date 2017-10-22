@@ -20,27 +20,18 @@ class InvocableInterfaceTest extends TestCase
     const TEST_SUBJECT_CLASSNAME = 'Dhii\Invocation\InvocableInterface';
 
     /**
-     * The invocation return value.
-     *
-     * @since [*next-version*]
-     */
-    const INVOCATION_RETURN = 'foobar';
-
-    /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
+     * @param mixed|callable|null $return The value to return, or the function to determine that value.
+     *
      * @return InvocableInterface
      */
-    public function createInstance()
+    public function createInstance($return = null)
     {
-        $returnValue = static::INVOCATION_RETURN;
-
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->__invoke(function() use ($returnValue) {
-                return $returnValue;
-            })
+            ->__invoke($return)
             ->new();
 
         return $mock;
@@ -67,10 +58,11 @@ class InvocableInterfaceTest extends TestCase
      */
     public function testCanBeCalled()
     {
-        $instance = $this->createInstance();
+        $data = uniqid('result-');
+        $instance = $this->createInstance($data);
 
         $result = $instance();
 
-        $this->assertEquals(static::INVOCATION_RETURN, $result, '');
+        $this->assertEquals($data, $result, 'The invocable returned a wrong result');
     }
 }
