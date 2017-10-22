@@ -20,7 +20,7 @@ interface InvocableInterface
      *
      * @since [*next-version*]
      *
-     * @param mixed $argN An argument to the invocation.
+     * @param mixed $arg,... Arguments to the invocation.
      *
      * @return mixed The result of the invocation.
      *
