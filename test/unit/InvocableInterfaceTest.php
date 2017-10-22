@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Invocation\FuncTest;
+namespace Dhii\Invocation\UnitTest;
 
 use Dhii\Invocation\InvocableInterface;
 use Xpmock\TestCase;
