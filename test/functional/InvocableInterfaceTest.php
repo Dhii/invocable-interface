@@ -1,12 +1,12 @@
 <?php
 
-namespace Dhii\Util\FuncTest\Invocation;
+namespace Dhii\Invocation\FuncTest;
 
-use Dhii\Util\Invocation\InvocableInterface;
+use Dhii\Invocation\InvocableInterface;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see Dhii\Util\Invocation\InvocableInterface}.
+ * Tests {@see Dhii\Invocation\InvocableInterface}.
  *
  * @since [*next-version*]
  */
@@ -17,7 +17,7 @@ class InvocableInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Util\\Invocation\\InvocableInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Invocation\\InvocableInterface';
 
     /**
      * The invocation return value.

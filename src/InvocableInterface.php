@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Util\Invocation;
+namespace Dhii\Invocation;
 
 /**
  * Something that can be invoked.
