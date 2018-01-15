@@ -3,6 +3,7 @@
 namespace Dhii\Invocation;
 
 use Dhii\Invocation\Exception\InvocationExceptionInterface;
+use Exception as RootException;
 
 /**
  * Something that can be invoked.
@@ -24,7 +25,7 @@ interface InvocableInterface
      *
      * @return mixed The result of the invocation.
      *
-     * @throws InvocationExceptionInterface If problem invoking.
+     * @throws RootException If problem invoking.
      */
     public function __invoke();
 }
